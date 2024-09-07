@@ -1,0 +1,266 @@
+ACK & NAK following all commands:
+  ACK
+  IN: 0x6f/0
+  NAK
+  IN: 0x6f/0
+
+On Screen Button:
+  IN: 0x6f/1
+  DATA0 (2): e4 05
+  ACK
+  ...
+  IN: 0x6f/1
+  DATA1 (2): e4 00
+  ACK
+
+Horizontal Width:
+  Slider Right:
+    OUT: 0x6f/0
+    DATA1 (2): 22 80
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 22 80
+  Slider Left:
+    OUT: 0x6f/0
+    DATA1 (2): 22 7f
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 22 7f
+
+Horizontal Position:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 20 71
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 20 71
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 20 70
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 20 70
+
+Corner Correction:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f0 34
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f0 34
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f0 35
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f0 35
+
+Vertical Height:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 79
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 79
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 78
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 78
+
+Vertcial Position:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 30 95
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 30 95
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 77
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 32 77
+
+Rotation:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 44 1d
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 44 1d
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 44 1c
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 44 1c
+
+Pincushion:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 24 57
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 24 57
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 24 56
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 24 56
+
+Keystone:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 42 81
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 42 81
+  Slider Left:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 42 80
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): 42 80
+
+High Voltage:
+  Slider Right:
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f2 c8
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f2 c8
+  Slider Left:
+    OUT: 0x6f/0
+    DATA1 (2): f2 c7
+    NAK
+    OUT: 0x6f/0
+    DATA1 (2): f2 c7
+
+Save Geometry:
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 e0 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): e0 0a
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 f4 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): f4 5e
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 e0 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): e0 0a
+  ...
+  DATA1: ZLP
+
+  IN: 0x6d/1
+  NAK
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 f4 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): f4 51
+  ...
+  DATA1: ZLP
+
+H-Focus:
+  Slider Right:
+    SETUP: 0x6f/0
+    DATA0 (8): 21 09 e0 03 00 00 02 00
+    ACK
+    OUT: 0x6f/0
+    DATA1 (2): e0 03
+    NAK
+    ...
+    SETUP: 0x6f/0
+    DATA0 (8): 21 09 f6 03 00 00 02 00
+    ACK
+    OUT: 0x6f/0
+    DATA1 (2): f6 5e
+    NAK
+  Slider Left:
+    SETUP: 0x6f/0
+    DATA0 (8): 21 09 e0 03 00 00 02 00
+    ACK
+    OUT: 0x6f/0
+    DATA1 (2): e0 03
+    NAK
+    ...
+    SETUP: 0x6f/0
+    DATA0 (8): 21 09 f6 03 00 00 02 00
+    ACK
+    OUT: 0x6f/0
+    DATA1 (2): f6 5d
+    NAK
+
+Save H-Focus:
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 e0 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): e0 03
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 e0 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): e0 09
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 f0 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): f0 ee
+  ...
+  IN: 0x6f/1
+  NAK
+  OUT: 0x6f/0
+  DATA1 (2): e0 07
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 f4 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): f4 bb
+  ...
+  DATA1: ZLP
+
+  SETUP: 0x6f/0
+  DATA0 (8): 21 09 f8 03 00 00 02 00
+  ACK
+  OUT: 0x6f/0
+  DATA1 (2): f8 5d
+  ...
+  DATA1: ZLP
